@@ -45,7 +45,7 @@ digital-cv/
 
 1. Clone repository này về máy:
 ```bash
-git clone https://github.com/ductt1412/digital-cv.git
+git clone https://github. com/ductt1412/digital-cv.git
 ```
 
 2. Mở file `index.html` trong trình duyệt để xem trang web
@@ -62,7 +62,7 @@ git clone https://github.com/ductt1412/digital-cv.git
 
 **Trương Tiến Đức**
 - Email: ducttfx61260@funix.edu.vn
-- GitHub: [truongtienduc](https://github.com/truongtienduc)
+- GitHub: [truongtienduc](https://github.com/ductt1412)
 
 ## Giấy phép
 
