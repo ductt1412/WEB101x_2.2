@@ -4,7 +4,7 @@
 
 ## Demo
 
-Bạn có thể xem demo của project tại đây: [Digital CV Demo](https://truongtienduc.github.io/digital-cv/)
+Bạn có thể xem demo của project tại đây: [Digital CV Demo](https://ductt1412.github.io/WEB101x_2.2)
 
 ## Tính năng
 
