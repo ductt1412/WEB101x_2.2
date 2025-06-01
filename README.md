@@ -1,69 +1,47 @@
-# Digital CV Project
+# WEB101x_2.2 - Xây dựng website đầu tiên
 
-Đây là project CV cá nhân được xây dựng bằng HTML, CSS và JavaScript.
+Repository này chứa các bài tập của khóa học WEB101x_2.2 - Xây dựng website đầu tiên của FUNiX.
 
-## Demo
+## Cấu trúc Repository
 
-Bạn có thể xem demo của project tại đây: [Digital CV Demo](https://truongtienduc.github.io/digital-cv/)
+Repository được tổ chức theo các nhánh (branch) cho từng assignment:
 
-## Tính năng
+- `master`: Chứa file README.md mô tả repository
+- `assignment_01`: Code cho Assignment 01 - [Mô tả bài tập]
+- `assignment_02`: Code cho Assignment 02 - [Mô tả bài tập]
+- `assignment_03`: Code cho Assignment 03 - Digital CV Project
 
+## Assignment 03 - Digital CV Project
+
+Nhánh `assignment_03` chứa code cho project Digital CV với các tính năng:
 - Responsive trên tất cả các thiết bị (Mobile, Tablet, Desktop)
 - Sử dụng Bootstrap 5 cho layout và components
 - Tích hợp font icons
-- Hiệu ứng chuyển động mượt mà
 - Form xác thực email
 - Trang chi tiết project với layout grid
 
-## Cấu trúc Project
-
-```
-digital-cv/
-│
-├── css/
-│   ├── style.css
-│   ├── font.css
-│   ├── mobile.css
-│   ├── tablet.css
-│   └── laptop.css
-│
-├── js/
-│   └── script.js
-│
-├── images/
-│   ├── banner.jpg
-│   ├── project_1.png
-│   ├── project_2.png
-│   └── project_3.png
-│
-├── index.html
-├── digital-cv.html
-└── README.md
-```
+Demo: [Digital CV Demo](https://ductt1412.github.io/WEB101x_2.2)
 
 ## Hướng dẫn sử dụng
 
-1. Clone repository này về máy:
+1. Clone repository:
 ```bash
-git clone https://github.com/ductt1412/digital-cv.git
+git clone https://github.com/truongtienduc/WEB101x_2.2.git
 ```
 
-2. Mở file `index.html` trong trình duyệt để xem trang web
+2. Chuyển sang nhánh assignment cần xem:
+```bash
+git checkout assignment_03  # Ví dụ xem assignment 03
+```
 
-## Công nghệ sử dụng
-
-- HTML5
-- CSS3
-- JavaScript
-- Bootstrap 5
-- Google Fonts (Montserrat)
-
-## Tác giả
+## Sinh viên thực hiện
 
 **Trương Tiến Đức**
+- Mã số sinh viên: FX61260
 - Email: ducttfx61260@funix.edu.vn
-- GitHub: [truongtienduc](https://github.com/truongtienduc)
 
-## Giấy phép
+## Khóa học
 
-Project này được phân phối dưới giấy phép MIT. Xem file `LICENSE` để biết thêm chi tiết. 
+- Mã khóa học: WEB101x_2.2
+- Tên khóa học: Xây dựng website đầu tiên
+- Nền tảng: FUNiX
