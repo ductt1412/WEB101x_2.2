@@ -1,0 +1,188 @@
+/* Styles cho màn hình tablet (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Typography cho tablet */
+  body {
+    font-size: var(--font-size-base);  /* Giữ cỡ chữ cơ bản */
+  }
+
+  /* Style cho banner trên tablet */
+  .banner .title h3 {
+    font-size: var(--font-size-3xl);  /* Cỡ chữ tiêu đề banner vừa phải */
+  }
+
+  .banner .title span {
+    font-size: var(--font-size-lg);  /* Cỡ chữ phụ đề banner vừa phải */
+  }
+
+  /* Cỡ chữ cho các section */
+  .fs-section-title {
+    font-size: var(--font-size-2xl);  /* Cỡ chữ tiêu đề section vừa phải */
+  }
+
+  .fs-large {
+    font-size: var(--font-size-2xl);  /* Cỡ chữ lớn vừa phải */
+  }
+
+  .fs-normal {
+    font-size: var(--font-size-base);  /* Giữ cỡ chữ thường */
+  }
+
+  /* Style cho các header trong detail info */
+  .detail-info .detail-item__header .title,
+  .detail-info .detail-item__header .icon {
+    font-size: var(--font-size-2xl);  /* Cỡ chữ header vừa phải */
+  }
+
+  /* Style cho phần certificate */
+  .certificate__item strong {
+    font-size: var(--font-size-lg);  /* Cỡ chữ tiêu đề certificate */
+    margin-bottom: 0.375rem;
+  }
+
+  .certificate__item p {
+    font-size: var(--font-size-base);  /* Cỡ chữ nội dung certificate */
+  }
+
+  /* Style cho phần project */
+  .project__item--header {
+    font-size: var(--font-size-lg);  /* Cỡ chữ tiêu đề project */
+  }
+
+  /* Cỡ chữ cho các phần thông tin phụ */
+  .project__item--duration,
+  .project__item--details,
+  .duration,
+  .description {
+    font-size: var(--font-size-base);  /* Giữ cỡ chữ thông tin phụ */
+  }
+
+  /* Khoảng cách section */
+  .my-section {
+    margin-top: 1.75rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .mb-section {
+    margin-bottom: 1.75rem;
+  }
+
+  .mt-section {
+    margin-top: 1.75rem;
+  }
+
+  /* Layout adjustments */
+  .container-fluid {
+    padding: 0 2rem !important;
+  }
+
+  .navbar-list {
+    min-width: 100%;
+    grid-template-columns: 1fr 1fr 50px 1fr 1fr;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-item {
+    padding: 1rem;
+    border: none;
+  }
+
+  .nav-item:not(:last-child) {
+    border-right: 1px solid var(--secondary-color-light-300);
+  }
+
+  .nav-item .user-avatar {
+    display: none;
+  }
+
+  /* Cards and sections */
+  .detail-info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .personal-info {
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .personal-info .career,
+  .personal-info .info {
+    padding: 2rem;
+  }
+
+  /* Certificates */
+  .certificate {
+  }
+
+  .certificate .list-certificate {
+    gap: 1.5rem;
+  }
+
+  .list-certificate .certificate__item {
+    padding: 1.5rem;
+  }
+
+  /* Projects */
+  .projects {
+  }
+
+  .projects .list-project {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0 0;
+  }
+
+  /* Hobbies */
+  .hobby {
+    gap: 1rem;
+  }
+
+  /* Skills */
+  .skill {
+    margin-bottom: 1.25rem;
+  }
+
+  .skill:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Điều chỉnh detail sections cho tablet */
+  .detail-info .detail-item {
+    padding: 1.5rem;
+    row-gap: 1rem;
+  }
+
+  /* Luôn hiển thị preview button trên tablet */
+  .detail-info .detail-item__preview {
+    opacity: 1;
+    position: relative;
+    transform: none;
+    top: auto;
+    padding: 0.75rem 0;
+    pointer-events: auto;
+  }
+
+  /* Giảm hiệu ứng hover trên tablet */
+  .detail-info .detail-item:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Điều chỉnh nút View More/Less */
+  .view-toggle {
+    width: auto;
+    min-width: 120px;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Điều chỉnh max-height cho content */
+  .detail-item__body.show {
+    max-height: none;
+  }
+
+  /* Thêm touch feedback */
+  .detail-item__header:active {
+    background-color: var(--secondary-color-light-200);
+  }
+}

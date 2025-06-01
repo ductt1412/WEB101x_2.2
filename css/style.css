@@ -1,0 +1,621 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Primary colors */
+  --primary-color-light: #60a5fa;  /* Blue 400 */
+  --primary-color: #3b82f6;        /* Blue 500 */
+  --primary-color-dark: #2563eb;   /* Blue 600 */
+
+  /* Secondary/Gray colors */
+  --secondary-color-light-100: #f8fafc;  /* Gray 50 */
+  --secondary-color-light-200: #f1f5f9;  /* Gray 100 */
+  --secondary-color-light-300: #e2e8f0;  /* Gray 200 */
+  --secondary-color-light-400: #cbd5e1;  /* Gray 300 */
+  --secondary-color-light-500: #94a3b8;  /* Gray 400 */
+
+  /* Text colors */
+  --text-color-primary: #1e293b;    /* Gray 800 */
+  --text-color-secondary: #475569;  /* Gray 600 */
+  --text-color-light: #64748b;     /* Gray 500 */
+
+  /* Success colors */
+  --success-color-light: #86efac;  /* Green 300 */
+  --success-color: #22c55e;        /* Green 500 */
+
+  /* Border & Other */
+  --border-color: var(--secondary-color-light-300);
+  --border-orange-color: #FF9800;
+  --seperator-color: var(--secondary-color-light-400);
+  
+  /* Font */
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  --border-radius: 8px;
+}
+
+body {
+  background-color: var(--secondary-color-light-100);
+  font-family: "Montserrat", sans-serif;
+  color: var(--text-color-primary);
+  line-height: 1.6;
+  font-size: var(--font-size-base);
+}
+
+/* Font sizes */
+.fs-section-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+}
+
+.fs-large {
+  font-size: var(--font-size-3xl);
+}
+
+.fs-normal {
+  font-size: var(--font-size-base);
+}
+
+/* Margins */
+.my-section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.mb-section {
+  margin-bottom: 2rem;
+}
+
+.mt-section {
+  margin-top: 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.overlay {
+  width: 100%;
+  height: 60rem;
+  background-color: black;
+  opacity: 0.45;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.banner {
+  position: relative;
+}
+.banner img {
+  width: 100%;
+  height: 60rem;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.banner .title {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: white !important;
+  text-align: center;
+}
+
+.banner .title h3 {
+  font-size: var(--font-size-4xl);
+  color: white !important;
+}
+
+.banner .title span {
+  font-size: var(--font-size-xl);
+}
+
+/* Style phần navigation */
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+/* Danh sách navgation */
+.navbar-list {
+  display: grid;
+  min-width: 800px;
+  grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+  justify-content: center;
+  border-left: 1px solid var(--border-color);
+  min-height: 60px;
+}
+
+/* Border right cho từng item */
+.navbar-list .nav-item {
+  border-right: 1px solid var(--border-color);
+}
+
+/* Style cho thẻ bọc content của nav item */
+.nav-item .item-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Setting màu cho icon */
+.nav-item .icon {
+  color: var(--primary-color);
+}
+
+.nav-item .user-avatar {
+  position: absolute;
+  background-color: red;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-image: url("../images/avatar.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 0.5rem solid white;
+}
+.nav-item .user-avatar img {
+  padding: 1rem;
+}
+
+/* Style phần thông tin cá nhân */
+.personal-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 0;
+}
+
+.personal-info .career {
+  background-color: var(--secondary-color-light-300);
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.personal-info .info {
+  background-color: var(--secondary-color-light-200);
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+.personal-info .career,
+.personal-info .info {
+  padding: 3rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.personal-info .career > div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-self: end;
+}
+
+/* Style phần chi tiết */
+.detail-info {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 2rem 1rem;
+  justify-content: center;
+}
+
+/* Style cho từng phần thông tin */
+.detail-info .detail-item {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.detail-item__header {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 3fr 1fr;
+  margin-bottom: 1rem;
+}
+
+.detail-item__body {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.detail-item__body.show {
+  display: block;
+  opacity: 1;
+}
+
+.detail-item__content {
+  margin-bottom: 1rem;
+}
+
+.detail-item__toggle {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.view-toggle {
+  padding: 0.25rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.detail-info .detail-item__header .title,
+.detail-info .detail-item__header .icon {
+  font-size: var(--font-size-2xl);
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+ul li .duration {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-style: italic;
+}
+ul li .description {
+  margin-left: 0.5rem;
+}
+
+/* Style phần tag ví dụ như tag Hiện tại */
+.tag {
+  border-radius: 5px;
+  padding: 0.125rem 0.5rem;
+}
+
+.tag.tag-success {
+  background-color: var(--success-color);
+  color: white;
+}
+
+/* Style phần sở thích */
+.hobby {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.hobby .hobby-item {
+  border: 2px solid var(--primary-color-light);
+  color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-size: 1rem;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Style phần kĩ năng */
+.skill {
+  display: flex;
+  align-items: center;
+}
+.skill .skill-level {
+  background: var(--secondary-color-light-300);
+  display: inline-block;
+  height: 2px;
+  margin-right: 10px;
+  width: 45px;
+}
+.skill .skill-level.active {
+  background: var(--primary-color);
+}
+
+/* Style cho phần giải thưởng */
+.certificate {
+  margin-top: 2rem;
+}
+.certificate .list-certificate {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  background-color: transparent !important;
+}
+/* Style từng item trong list */
+.list-certificate .certificate__item {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: auto 2fr;
+  gap: 1rem;
+  background-color: white;
+  border-right: 1px solid var(--border-orange-color);
+}
+
+.seperator__item {
+  width: 1px;
+  height: 100%;
+  background-color: var(--seperator-color);
+}
+
+/* Style cho ảnh certificate */
+.certificate__item img {
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Style phần DỰ ÁN */
+.projects {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.projects .list-project {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  gap: 2rem 1rem;
+  justify-content: center;
+  padding: 0 1.5rem;
+}
+/* Style cho từng phần thông tin */
+.list-project .project__item {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  display: grid;
+  grid-template-rows: 300px 40px 50px auto;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.project__item div:not(:first-child) {
+  border-top: 1px solid var(--border-color);
+  padding: 0.5rem;
+}
+.project__item--details table td {
+  padding: 0.5rem 0;
+}
+.project__item--img {
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.project__item--duration {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.project__item--details table {
+  border-collapse: collapse;
+}
+.project__item--details table tr:not(:last-child) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+
+/* Animations */
+@keyframes skillFill {
+  from {
+    width: 0;
+  }
+  to {
+    width: 45px;
+  }
+}
+
+.animate-skill .skill-level.active {
+  animation: skillFill 1s ease-out forwards;
+}
+
+.project__item {
+  transition: all 0.3s ease;
+}
+
+/* Hover effects */
+.nav-item:hover {
+  background-color: var(--secondary-color-light-200);
+  cursor: pointer;
+}
+
+.hobby .hobby-item:hover {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* Bootstrap utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Improve accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar-list {
+    min-width: 700px;
+    grid-template-columns: 2fr 2fr 1fr 2fr 2fr;
+  }
+  .nav-item .user-avatar {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .container-fluid {
+    padding: 0 0 !important;
+  }
+  .navbar-list {
+    min-width: 400px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 0px 1fr 1fr;
+  }
+  .nav-item {
+    padding-left: 2rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+  }
+  .nav-item .item-container {
+    justify-content: start;
+  }
+  .nav-item .user-avatar {
+    display: none;
+  }
+}
+
+/* Typography updates */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--text-color-primary);
+}
+
+strong {
+  font-weight: 600;
+  color: var(--text-color-primary);
+}
+
+/* Certificate and Project sections */
+.project__item {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.list-certificate {
+  gap: 2rem;
+  background-color: transparent !important;
+}
+
+.seperator__item {
+  background-color: var(--seperator-color);
+}
+
+/* Certificate styles */
+.certificate__item strong {
+  font-size: var(--font-size-lg);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.certificate__item p {
+  font-size: var(--font-size-sm);
+  color: var(--text-color-secondary);
+}
+
+/* Project styles */
+.project__item--header {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.project__item--duration {
+  font-size: var(--font-size-sm);
+}
+
+.project__item--details {
+  font-size: var(--font-size-sm);
+}
+
+/* Skill section */
+.skill-title {
+  font-size: var(--font-size-base);
+  margin-bottom: 0.5rem;
+}
+
+/* Duration and description */
+.duration {
+  font-size: var(--font-size-sm);
+  color: var(--text-color-secondary);
+}
+
+.description {
+  font-size: var(--font-size-sm);
+  color: var(--text-color-secondary);
+  line-height: 1.6;
+}
+
+/* Footer styles */
+.footer {
+  background-color: white;
+  padding: 1rem 0;
+  margin-top: 1rem;
+}
+
+.footer .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+}
+
+.social-link:hover {
+  color: var(--primary-color);
+}
+
+.social-link .icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--secondary-color-light-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover .icon-wrapper {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.social-link .platform-name {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+}

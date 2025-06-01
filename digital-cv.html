@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/font.css">
+    <title>Digital CV - Project Details</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color-primary);
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 2rem;
+        }
+
+        .project-block {
+            background-color: var(--secondary-color-light-200);
+            border-radius: var(--border-radius);
+            height: 100%;
+        }
+        .project-block h3 {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            margin: 0;
+            border-top-left-radius: var(--border-radius);
+            border-top-right-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+        .project-block h3 i {
+            font-size: 1.25rem;
+        }
+        .project-content {
+            padding: 1rem;
+            font-size: 0.95rem;
+        }
+        .project-content strong {
+            font-weight: 600;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 1rem;
+            height: 1rem;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 0.45rem;
+            top: 1.5rem;
+            width: 2px;
+            height: calc(100% - 1rem);
+            background-color: var(--primary-color-light);
+        }
+        .timeline-item:last-child::after {
+            display: none;
+        }
+
+        /* Responsive layout */
+        @media (min-width: 992px) {
+            .project-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: auto auto;
+                gap: 1.5rem;
+            }
+            
+            .timeline-wrapper {
+                grid-row: 1 / span 2;
+                grid-column: 3;
+                height: 100%;
+            }
+        }
+
+        /* Tablet layout */
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            .project-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .timeline-wrapper {
+                grid-column: 1 / span 2;
+                order: 1;
+            }
+
+            #goals { order: -5; }
+            #scope { order: -4; }
+            #team { order: -3; }
+            #primary { order: -2; }
+        }
+
+        /* Mobile layout */
+        @media (max-width: 767.98px) {
+            .project-grid {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .timeline-wrapper {
+                order: 1;
+            }
+
+            #goals { order: -5; }
+            #scope { order: -4; }
+            #team { order: -3; }
+            #primary { order: -2; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid py-4">
+        <h1 class="text-center mb-4">Project Details</h1>
+        
+        <div class="project-grid">
+            <!-- Goals -->
+            <div class="project-block" id="goals">
+                <h3>
+                    <i class="icon icon-flag"></i>
+                    Goals
+                </h3>
+                <div class="project-content">
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3">
+                            <strong>Business goals:</strong>
+                            <ul>
+                                <li>Xây dựng CV trực tuyến để giới thiệu bản thân</li>
+                                <li>Tạo portfolio để showcase các project đã làm</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>User goals:</strong>
+                            <ul>
+                                <li>Dễ dàng xem thông tin ứng viên</li>
+                                <li>Có thể xem CV trên nhiều thiết bị khác nhau</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Scope -->
+            <div class="project-block" id="scope">
+                <h3>
+                    <i class="icon icon-search"></i>
+                    Scope
+                </h3>
+                <div class="project-content">
+                    <div class="mb-3">
+                        <strong>IN</strong>
+                        <ul>
+                            <li>Xây dựng giao diện responsive</li>
+                            <li>Hiển thị thông tin cá nhân</li>
+                            <li>Hiển thị các kỹ năng và kinh nghiệm</li>
+                            <li>Hiển thị các chứng chỉ và giải thưởng</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <strong>OUT</strong>
+                        <ul>
+                            <li>Chức năng đăng nhập/đăng ký</li>
+                            <li>Chức năng chỉnh sửa thông tin trực tiếp</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline-wrapper">
+                <div class="project-block" id="timeline">
+                    <h3>
+                        <i class="icon icon-calendar"></i>
+                        Timeline
+                    </h3>
+                    <div class="project-content">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <strong>01/09/2023:</strong> Bắt đầu dự án
+                                <ul>
+                                    <li>Phân tích yêu cầu</li>
+                                    <li>Thiết kế giao diện</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-item">
+                                <strong>15/09/2023:</strong> Phát triển
+                                <ul>
+                                    <li>Xây dựng HTML structure</li>
+                                    <li>Styling với CSS</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-item">
+                                <strong>01/10/2023:</strong> Responsive
+                                <ul>
+                                    <li>Tối ưu cho tablet</li>
+                                    <li>Tối ưu cho mobile</li>
+                                </ul>
+                            </div>
+                            <div class="timeline-item">
+                                <strong>15/10/2023:</strong> Hoàn thành
+                                <ul>
+                                    <li>Testing và debug</li>
+                                    <li>Deploy lên hosting</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team -->
+            <div class="project-block" id="team">
+                <h3>
+                    <i class="icon icon-users"></i>
+                    Team
+                </h3>
+                <div class="project-content">
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3">
+                            <strong>Developer:</strong> Trương Tiến Đức
+                            <ul>
+                                <li>Phát triển giao diện</li>
+                                <li>Tối ưu responsive</li>
+                                <li>Testing và debug</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Mentor:</strong> FUNiX
+                            <ul>
+                                <li>Code review</li>
+                                <li>Đánh giá và góp ý</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Primary -->
+            <div class="project-block" id="primary">
+                <h3>
+                    <i class="icon icon-target"></i>
+                    Primary
+                </h3>
+                <div class="project-content">
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-3">
+                            <strong>Must have:</strong>
+                            <ul>
+                                <li>Giao diện responsive trên các thiết bị</li>
+                                <li>Hiển thị đầy đủ thông tin CV</li>
+                                <li>Navigation menu dễ sử dụng</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Nice to have:</strong>
+                            <ul>
+                                <li>Animation và hiệu ứng chuyển động</li>
+                                <li>Dark/Light mode</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html> 
